@@ -14,10 +14,14 @@ const Shop = () => {
     }, []);
     const handleAddToCart = (product) => {
         if (cart.length < 4) {
-            const newCart = [...cart, product]
-            setCart(newCart);
-        }
-        else {
+            if (!cart.includes(product)) {
+                const newCart = [...cart, product]
+                setCart(newCart);
+            }else{
+                alert('You already added this product.')
+            }
+
+        } else {
             alert("You cannot select more than 4 watch");
         }
     }
@@ -56,6 +60,7 @@ const Shop = () => {
                     <button onClick={clearCart} className='review-order'>Clear</button>
                 </div>
             </div>
+            {/* answer ans question  */}
             <div className='ans-and-q'>
                 <h3>Answer and Question</h3>
                 <div>
