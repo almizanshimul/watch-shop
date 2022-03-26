@@ -16,8 +16,11 @@ const Shop = () => {
             const newCart = [...cart, product]
             setCart(newCart);
         }
+        else{
+            alert("Don't more add");
+        }
     }
-    const clearCart=()=>{
+    const clearCart = () => {
         setCart([]);
     }
     return (
