@@ -73,6 +73,9 @@
     .products-container {
         grid-template-columns: repeat(2, 1fr);
     }
+    .ans-and-q {
+        width: auto;
+    }
 }
 @media only screen and (max-width: 768px) {
     .shop-container {
@@ -82,6 +85,9 @@
     .products-container {
         grid-template-columns: repeat(1, 1fr);
     }
+    .ans-and-q {
+        width: auto;
+    }
 }
 @media only screen and (max-width: 600px) {
     .shop-container {
@@ -90,5 +96,13 @@
 
     .products-container {
         grid-template-columns: repeat(1, 1fr);
+        order: 2;
+    }
+    .cart-container {
+        order: 1;
+        position: relative;
+    }
+    .ans-and-q {
+        width: auto;
     }
 }

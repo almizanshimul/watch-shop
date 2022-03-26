@@ -7,17 +7,21 @@ const Shop = () => {
     const [products, setProduct] = useState([]);
     const [cart, setCart] = useState([]);
     const [oneProduct, setOneProduct] = useState([]);
+
+    // Product Fetch 
     useEffect(() => {
         fetch('products.json')
             .then(res => res.json())
             .then(data => setProduct(data))
     }, []);
+
+    // Add to Cart Button 
     const handleAddToCart = (product) => {
         if (cart.length < 4) {
             if (!cart.includes(product)) {
                 const newCart = [...cart, product]
                 setCart(newCart);
-            }else{
+            } else {
                 alert('You already added this product.')
             }
 
@@ -36,7 +40,7 @@ const Shop = () => {
             alert('Your cart is empty')
         }
     }
-    // Clear Cart 
+    // Clear Cart and one selected product
     const clearCart = () => {
         setCart([]);
         setOneProduct([]);
@@ -45,11 +49,13 @@ const Shop = () => {
     return (
         <div>
             <div className='shop-container'>
+                {/* Product Container  */}
                 <div className="products-container">
                     {
                         products.map(product => <Product key={product.id} product={product} handleAddToCart={handleAddToCart}></Product>)
                     }
                 </div>
+                {/* Cart Container  */}
                 <div className="cart-container">
                     <h2>Selected watch: {cart.length}</h2>
                     {
