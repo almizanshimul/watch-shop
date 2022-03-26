@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import Cart from '../Cart/Cart';
+import { Cart, Item } from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css'
 
 const Shop = () => {
     const [products, setProduct] = useState([]);
     const [cart, setCart] = useState([]);
+    const [oneProduct, setOneProduct] = useState([]);
     useEffect(() => {
         fetch('products.json')
             .then(res => res.json())
@@ -16,13 +17,27 @@ const Shop = () => {
             const newCart = [...cart, product]
             setCart(newCart);
         }
-        else{
-            alert("Don't more add");
+        else {
+            alert("You cannot select more than 4 laptops");
         }
     }
+    // Choose one for me 
+    const chooseOne = () => {
+        if (cart.length != 0) {
+            const randomNumber = Math.random() * cart.length
+            const rounded = Math.floor(randomNumber)
+            setOneProduct(cart[rounded]);
+        }
+        else {
+            alert('Your cart is empty')
+        }
+    }
+    // Clear Cart 
     const clearCart = () => {
         setCart([]);
+        setOneProduct([]);
     }
+
     return (
         <div className='shop-container'>
 
@@ -32,12 +47,12 @@ const Shop = () => {
                 }
             </div>
             <div className="cart-container">
-                <h2>Select Apple watch</h2>
+                <h2>Selected watch: {cart.length}</h2>
                 {
                     cart.map(item => <Cart key={item.id} cart={item}></Cart>)
                 }
-                {/* <Cart cart={cart}></Cart> */}
-                <button className='clear-cart'>Choose one for me</button>
+                <button onClick={chooseOne} className='clear-cart'>Choose one for me</button>
+                <Item item={oneProduct}></Item>
                 <button onClick={clearCart} className='review-order'>Clear</button>
             </div>
         </div>
