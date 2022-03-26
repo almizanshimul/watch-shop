@@ -3,19 +3,21 @@ import Product from '../Product/Product';
 import './Shop.css'
 
 const Shop = () => {
-    const [products, setproduct] = useState([]);
+    const [products, setProduct] = useState([]);
     useEffect(() => {
         fetch('products.json')
             .then(res => res.json())
-            .then(data => setproduct(data))
+            .then(data => setProduct(data))
     }, [])
     return (
         <div className='shop-container'>
             <div className="products-container">
-                <Product key={products.id} products={products}></Product>
+                {
+                    products.map(product => <Product key={product.id} product={product}></Product>)
+                }
             </div>
             <div className="cart-container">
-        <h1>this is a test</h1>
+                <h1>this is a test</h1>
             </div>
         </div>
     );
