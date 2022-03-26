@@ -44,6 +44,27 @@
     font-size: 18px;
 }
 
+/* Answer and question */
+.ans-and-q {
+    width: 1140px;
+    margin: 0 auto;
+    padding: 16px;
+}
+.ans-and-q h3{
+    font-size: 28px;
+    text-align: center;
+}
+.ans-and-q h4{
+    font-size: 22px;
+}
+.ans-and-q p{
+    font-size: 18px;
+}
+
+
+
+/* Mobile and Tablet devices and Responsive */
+
 @media only screen and (max-width: 1365px) {
     .shop-container {
         grid-template-columns: 2fr 1fr;
