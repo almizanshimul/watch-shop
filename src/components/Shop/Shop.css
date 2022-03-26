@@ -43,3 +43,31 @@
     cursor: pointer;
     font-size: 18px;
 }
+
+@media only screen and (max-width: 1365px) {
+    .shop-container {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .products-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 768px) {
+    .shop-container {
+        grid-template-columns: 2fr 1.5fr;
+    }
+
+    .products-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media only screen and (max-width: 600px) {
+    .shop-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .products-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

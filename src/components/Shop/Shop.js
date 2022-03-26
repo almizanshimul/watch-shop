@@ -23,7 +23,7 @@ const Shop = () => {
     }
     // Choose one for me 
     const chooseOne = () => {
-        if (cart.length != 0) {
+        if (cart.length !== 0) {
             const randomNumber = Math.random() * cart.length
             const rounded = Math.floor(randomNumber)
             setOneProduct(cart[rounded]);
