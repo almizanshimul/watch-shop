@@ -1,0 +1,20 @@
+.header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header h2 {
+    font-weight: 400;
+    font-size: 40px;
+    color: purple;
+    margin: 0;
+    line-height: 52px;
+}
+
+.header p {
+    font-weight: 500;
+    font-size: 24px;
+    color: black;
+    margin: 0;
+    line-height: 32px;
+}
