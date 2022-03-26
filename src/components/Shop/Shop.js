@@ -18,7 +18,7 @@ const Shop = () => {
             setCart(newCart);
         }
         else {
-            alert("You cannot select more than 4 laptops");
+            alert("You cannot select more than 4 watch");
         }
     }
     // Choose one for me 
