@@ -12,8 +12,7 @@
 }
 
 .cart-container {
-    position: sticky;
-    top: 10px;
+    height: fit-content;
     box-shadow: 0 0 20px #00000020;
     border-radius: 8px 0 0 8px;
     padding: 16px;
