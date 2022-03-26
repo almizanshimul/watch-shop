@@ -4,11 +4,12 @@
     padding: 8px;
     border-radius: 8px;
     position: relative;
+    background-color: #fff;
 }
 
 .product img {
-    margin: 0 auto;
-    width: 100%;
+    margin: 10px;
+    width: fit-content;
     border-radius: 8px;
 }
 
@@ -36,12 +37,13 @@
     right: auto;
     border: none;
     border-radius: 0 0 8px 8px;
-    background-color: #FFE0B3;
+    background-color: #2D455E;
     font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    color: white;
 }
 
 .btn .cart-icon {

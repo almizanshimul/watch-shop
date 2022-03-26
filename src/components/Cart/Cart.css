@@ -1,0 +1,27 @@
+.cart-product{
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 5fr 0.5fr;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.cart-product img{
+    width: 60%;
+
+}
+.cart-product h3{
+font-size: 16px;
+font-weight: 500;
+}
+.signal-product-clear{
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+}
+.signal-product-clear .cart-icon {
+    width: 18px;
+    height: 18px;
+    margin-left: 5px;
+}
