@@ -100,7 +100,7 @@
     }
     .cart-container {
         order: 1;
-        position: relative;
+        position: static;
     }
     .ans-and-q {
         width: auto;
